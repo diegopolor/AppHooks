@@ -4,7 +4,7 @@ import AppHooks from "./AppHooks";
 import './AppHooks.css'
 
 ReactDom.createRoot(document.getElementById('root')).render(
-  
+    <React.StrictMode>
         <AppHooks />
-   
+    </React.StrictMode>
 )
