@@ -4,6 +4,7 @@ import {
     Container,
     ContainerTitle,
     Button,
+    Input,
     EditIcon,
     ReloadIcon 
 } from './'
@@ -12,24 +13,21 @@ import {
 
 const PersonForm = ({ name, lastName, age, open, changeState, resetForm })=> ( //eslint-disable-line
     <form className="bg-white flex flex-col" >
-        <input 
-            className="border-2 rounded my-2"
+        <Input 
             name='name' 
             onChange={changeState} 
             placeholder="Nombre"
             type="text" 
             value={name} 
         />
-        <input 
-            className="border-2 rounded my-2"
+        <Input 
             name='lastName' 
             onChange={changeState} 
             placeholder="Apellido" 
             type="text" 
             value={lastName} 
             />
-        <input 
-            className="border-2 rounded my-2"
+        <Input 
             name='age' 
             onChange={changeState} 
             placeholder="Edad" 

@@ -1,4 +1,4 @@
-import { ObjectState, CustomsHooks, CompUseRef, Memorize, Padre } from './components'
+import { ObjectState, CustomsHooks, CompUseRef, Memorize, CompReducer } from './components'
 
 const AppHooks = ()=> (
     <div className="flex flex-col justify-center items-center my-20">
@@ -12,7 +12,7 @@ const AppHooks = ()=> (
             <CustomsHooks />
             <CompUseRef />
             <Memorize />
-            <Padre />
+            <CompReducer />
         </div>
        
     </div>

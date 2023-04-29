@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react"
 import { useCounter ,useTodos } from "../hooks"
 import { 
-    Container,  ContainerTitle ,
+    Container,  
+    ContainerTitle ,
     Button,
+    Input,
     RowLeftIcon,
     RowRightIcon 
 } from './'
@@ -30,7 +32,7 @@ const Todo = ({ id, title, completed })=> ( //eslint-disable-line
         <p className="italic inline-block" >Titulo: { title }</p>
         <label className="italic" > 
             Completado: 
-            <input type="checkbox" disabled checked={completed}/> 
+            <Input type="checkbox" disabled checked={completed}/> 
         </label>
     </div>
 )
@@ -75,9 +77,9 @@ export const CustomsHooks = ()=> {
         <Container>
             <ContainerTitle title='CustomHooks' />
             <p  className="italic my-1">Buscar Todos:</p>
-            <form onSubmit={handlerIdTodo}>
-                <input  className="border-2" type="number" placeholder="ingrese ID"/>
-                <button className="bg-teal-600 p-1 text-white m-1 rounded"  >Enviar</button>
+            <form className="flex" onSubmit={handlerIdTodo}>
+                <Input type="number" placeholder="ingrese ID"/>
+                <Button className="bg-teal-600 p-1 text-white m-1 rounded"  >Enviar</Button>
             </form>
 
             {loader ? <p>Cargando...</p> : <Todo { ...{ id, title, completed } } />}
